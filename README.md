@@ -2,6 +2,10 @@
 
 Practical networking and API design patterns for mobile engineers.
 
+This repository explores how real iOS apps communicate with backend systems under imperfect conditions: flaky networks, suspended apps, token expiry, schema drift, and partial failures. It focuses on the mobile edge of distributed systems: request lifecycles, retries, idempotency, offline-first sync, caching layers, contract testing, and scalability trade-offs.
+
+These notes are written from a senior iOS perspective and are intended as a reference for building resilient, testable, production-grade networking layers in Swift.
+
 ---
 
 ## Authorship & Approach
@@ -10,7 +14,7 @@ The prose in these notes is largely produced through collaborative drafting with
 
 I use LLMs to generate initial explanations, explore alternative formulations, and iteratively rewrite sections for clarity and structure. In many cases, the final text is the result of multiple guided rewrites rather than line-by-line manual authorship.
 
-What *is* mine — and what I explicitly stand behind — are:
+What *is* mine, and what I explicitly stand behind, are:
 - the topics chosen,
 - the architectural positions taken,
 - the trade-offs emphasized,
