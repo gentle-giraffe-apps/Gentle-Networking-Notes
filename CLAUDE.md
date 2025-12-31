@@ -15,6 +15,7 @@ This is a documentation repository containing practical networking and API desig
 04_reliability/       Circuit breakers, graceful degradation, offline-first, partial failures
 05_testing/           Contract testing, mocking vs replay, integration harness, chaos testing
 06_case_studies/      End-to-end API designs applying patterns from all chapters
+07_interview_drills/  System design interview preparation for mobile engineers
 ```
 
 ## Core Mental Models
