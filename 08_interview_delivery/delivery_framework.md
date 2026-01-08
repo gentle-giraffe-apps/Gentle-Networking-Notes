@@ -77,7 +77,29 @@ Important points:
 
 One approach is to start diagramming from the easiest endpoint, then update the diagram to accomodate different endpoints.
 
-## Deep Dives (10 mins)
+## Client Architecture(Mobile) (3-5 mins)
+
+1. Client responsibilities
+    1. local validation, optimistic UI, retries, backoff (standard retry with backoff)
+    2. dedupe / idempotency keys for POSTs
+    3. pagination strategy (cursor-based pagination with push invalidation if supported)
+2. Data model + state
+    1. local cache as read source, server as authority
+    2. sync state machine: idle -> syncing -> success/fail
+    3. server authoritative w/ conflict resolution strategy
+3. Caching
+    1. memory cache, disk cache, database
+    2. cache keys, TTLs, invalidation
+    3. image/video caching if relevant
+4. Offline + sync
+    1. outbox pattern: queue writes locally, sync later
+    2. background refresh limits (iOS)
+    3. resumable uploads/downloads?
+5. Observability
+    1. client logs/metrics: latency, error rates, retries, cache hit rate
+    2. crash reporting / tracing
+
+## Deep Dives (5 mins)
 
 Go through the non-functional requirements looking at the diagram to make sure it meets those.
 
@@ -86,3 +108,25 @@ Address edge cases
 Identify bottlenecks
 
 Improve design
+
+## Client Deep Dive (3-5 mins)
+
+"If there’s time, I can briefly describe structuring the client."
+
+1. Clean architecture (if relevant)
+    1. Coordinator -> View -> ViewModel -> UseCase/Repository <-> Services -> Persistence (DB/Disk) + Network
+2. Modular architecture
+    1. Modularize by layer
+        1. Modules:
+            1. App/Features: UI, coordinators, feature composition / assembly
+            2. Domain: entity models, use cases, repository protocols
+            3. Data: repository implementations + DTO↔domain mapping, caching 
+            4. Infra: concrete networking and DB clients
+        2. Domain imports nothing
+        3. Features import Domain.
+        4. Data imports Domain and Infra
+        5. Infra imports only Apple/vendor SDKs - no app modules.
+3. Integration test best practices
+    1. Data + Infra modules tested together w/ real persistence + network
+    2. In-memory / sandbox environments for CI and local runs
+
