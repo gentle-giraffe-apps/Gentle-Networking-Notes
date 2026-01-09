@@ -169,7 +169,7 @@ Group by **cohesion of change**, not storage location.
 Allow clients to opt into heavy fields.
 
 ```
-GET /flight?id=123&expand=crew,history
+GET /flights/123?expand=crew,history -> Partial<Flight>
 ```
 
 This avoids versioning every time payload weight changes.
