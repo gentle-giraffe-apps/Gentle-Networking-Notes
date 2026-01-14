@@ -2,6 +2,8 @@
 
 Practical networking and API design patterns for mobile engineers.
 
+💬 **[Join the discussion. Feedback and questions welcome](https://github.com/gentle-giraffe-apps/Gentle-Networking-Notes/discussions)**
+
 This repository explores how real iOS apps communicate with backend systems under imperfect conditions: flaky networks, suspended apps, token expiry, schema drift, and partial failures. It focuses on the mobile edge of distributed systems: request lifecycles, retries, idempotency, offline-first sync, caching layers, contract testing, and scalability trade-offs.
 
 These notes are written from a senior iOS perspective and are intended as a reference for building resilient, testable, production-grade networking layers in Swift.
