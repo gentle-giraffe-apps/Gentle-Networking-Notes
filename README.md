@@ -27,4 +27,4 @@ I treat LLMs as a high-leverage writing tool, similar to pair programming or tec
 
 These notes are intended as practical, experience-informed guides rather than academic papers or formal specifications.  
 
-![visitors](https://visitor-badge.laobi.icu/badge?page_id=gentle-giraffe-apps.Gentle-Networking-Notes)
+![Visitors](https://api.visitorbadge.io/api/visitors?path=https%3A%2F%2Fgithub.com%2Fgentle-giraffe-apps%2FGentle-Networking-Notes)
