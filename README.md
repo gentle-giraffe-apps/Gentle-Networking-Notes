@@ -26,3 +26,5 @@ What *is* mine, and what I explicitly stand behind, are:
 I treat LLMs as a high-leverage writing tool, similar to pair programming or technical editing, while retaining full responsibility for technical accuracy, judgment, and intent.
 
 These notes are intended as practical, experience-informed guides rather than academic papers or formal specifications.  
+
+![visitors](https://visitor-badge.laobi.icu/badge?page_id=gentle-giraffe-apps.Gentle-Networking-Notes)
